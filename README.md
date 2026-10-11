@@ -92,24 +92,10 @@ GAN helped the model learn more distinctive helicopter features.
 - Scikit-learn  
 
 ---
-## Project Structure
+## Ekip ve Görev Dağılımı (Team & Contributions)
 
-```text
-airborne-object-detection/
-|
-├── dataset/             # Original dataset
-├── dataset_augmented/   # GAN augmented dataset
-├── gan_generated/       # Synthetic images
-├── models/              # Saved models
-|
-├── cnn_baseline.ipynb
-├── gan_training.ipynb
-├── cnn_with_gan.ipynb
-|
-└── README.md
-
-
----
+- **Ümmü Habibe Ötken:** CNN tabanlı model mimarisinin tasarlanması, sınıflandırma modellerinin eğitilmesi ve performanslarının değerlendirilmesi.
+- **Fatma Müge Sıtkı:** Veri setinin hazırlanması ve ön işlenmesi, DCGAN modelinin geliştirilmesi ve sentetik veri üretimiyle veri artırma (Data Augmentation).
 ```
 
 ## Conclusion
