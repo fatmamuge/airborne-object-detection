@@ -1,1 +1,107 @@
-# airborne-object-detection
+#  Airborne Object Detection with GAN Augmentation
+
+##  Project Overview
+
+This project focuses on classifying airborne objects using a Convolutional Neural Network (CNN).
+
+The dataset includes four classes:
+
+-  Airplane  
+-  Bird  
+-  Drone  
+-  Helicopter  
+
+To improve classification performance, especially for difficult classes, **Generative Adversarial Networks (GANs)** were used for data augmentation.
+
+---
+
+##  Objective
+
+The main goal is to:
+
+> Improve classification performance using GAN-based synthetic data augmentation
+
+---
+
+##  Methodology
+
+### 1️ Baseline Model
+- A CNN model was trained using the original dataset
+- Evaluation was done using:
+  - Test accuracy
+  - Confusion matrix
+
+---
+
+### 2️ GAN Training
+- A DCGAN model was trained on helicopter images  
+- The generator learned to produce realistic helicopter samples  
+
+---
+
+### 3️ Data Augmentation
+- Generated synthetic helicopter images  
+- Combined them with the original dataset:
+    
+---
+
+### 4️ Retraining CNN
+- CNN model retrained using augmented dataset  
+- Same architecture and settings used for fair comparison  
+
+---
+
+## Results
+
+###  Baseline vs GAN-Augmented
+
+| Metric | Baseline | GAN-Augmented |
+|--------|----------|---------------|
+| Helicopter Accuracy | Lower | Higher  |
+| Misclassification (→ Airplane) | High | Reduced |
+
+---
+##  Confusion Matrix Comparison
+
+###  Baseline Model
+
+<img width="637" height="676" alt="Ekran görüntüsü 2026-05-02 150903" src="https://github.com/user-attachments/assets/644d9549-3592-4f62-9c3b-984422e6c4d7" />
+
+
+---
+
+###  GAN-Augmented Model
+<img width="641" height="509" alt="Ekran görüntüsü 2026-05-02 190351" src="https://github.com/user-attachments/assets/ddc9ad16-50b9-4092-b059-ed49d4343368" />
+
+
+###  Key Improvement
+
+> Misclassification of helicopters as airplanes significantly decreased  
+
+GAN helped the model learn more distinctive helicopter features.
+
+---
+
+##  Technologies Used
+
+- Python  
+- PyTorch  
+- Torchvision  
+- Google Colab  
+- Matplotlib  
+- Scikit-learn  
+
+---
+## Ekip ve Görev Dağılımı (Team & Contributions)
+
+- **Ümmü Habibe Ötken:** CNN tabanlı model mimarisinin tasarlanması, sınıflandırma modellerinin eğitilmesi ve performanslarının değerlendirilmesi.
+- **Fatma Müge Sıtkı:** Veri setinin hazırlanması ve ön işlenmesi, DCGAN modelinin geliştirilmesi ve sentetik veri üretimiyle veri artırma (Data Augmentation).
+```
+
+## Conclusion
+
+GAN-based data augmentation proved effective in improving the classification of helicopters.
+
+The model showed better generalization and reduced confusion with similar classes.
+
+---
